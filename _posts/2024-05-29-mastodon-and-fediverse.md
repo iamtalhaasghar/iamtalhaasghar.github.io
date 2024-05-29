@@ -1,11 +1,11 @@
 ---
-title: Mastodon & Fediverse
+title: Mastodon and Fediverse
 date: 2024-05-29 23:00:00 +0500
 categories: [Fediverse, Mastodon]
 tags: [mastodon, fediverse]     # TAG names should always be lowercase
 ---
 
-# Mastodon & Fediverse
+# Mastodon and Fediverse
 ## A potential twitter alternative for global muslim ummah
 
 ### What is mastodon?
