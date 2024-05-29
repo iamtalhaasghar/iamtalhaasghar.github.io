@@ -12,11 +12,11 @@
 
 - type: linkedin
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-#  url:  ''                  # Fill with your Linkedin homepage
+  url:  'https://www.linkedin.com/in/iamtalhaasghar'                  # Fill with your Linkedin homepage
 
-#- type: rss
-#  icon: "fas fa-rss"
-#  noblank: true
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
 
 
 # Uncomment and complete the url below to enable more contact options
