@@ -18,6 +18,10 @@
   icon: 'fab fa-discord'   # icons powered by <https://fontawesome.com/>
   url:  'https://discord.com/users/945910881043222538'                # Fill with your Linkedin homepage
 
+- type: stackoverflow
+  icon: 'fab fa-stack-overflow'   # icons powered by <https://fontawesome.com/>
+  url:  'https://stackoverflow.com/users/11033329/talha-asghar'                # Fill with your Linkedin homepage
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
