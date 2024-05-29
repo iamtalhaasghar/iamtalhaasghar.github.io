@@ -5,7 +5,6 @@ categories: [Fediverse, Mastodon]
 tags: [mastodon, fediverse]     # TAG names should always be lowercase
 ---
 
-# Mastodon and Fediverse
 ## A potential twitter alternative for global muslim ummah
 
 ### What is mastodon?
