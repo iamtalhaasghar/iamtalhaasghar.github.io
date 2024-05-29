@@ -14,6 +14,10 @@
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
   url:  'https://www.linkedin.com/in/iamtalhaasghar'                  # Fill with your Linkedin homepage
 
+- type: discord
+  icon: 'fab fa-discord'   # icons powered by <https://fontawesome.com/>
+  url:  'https://discord.com/users/945910881043222538'                # Fill with your Linkedin homepage
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
