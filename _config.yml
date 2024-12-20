@@ -104,9 +104,9 @@ related_blog_posts:
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
   repo: iamtalhaasghar/iamtalhaasghar.github.io # <your-github-user-name>/<your-github-repo-name>
-  repo_id: MDEwOlJlcG9zaXRvcnkzMTc1NjEzMjU= # leave empty or specify your repo_id (see https://giscus.app/)
+  repo_id: R_kgDONf_5CQ # leave empty or specify your repo_id (see https://giscus.app/)
   category: Comments # name of the category under which discussions will be created
-  category_id: DIC_kwDOEu2Z7c4Cfshd # leave empty or specify your category_id (see https://giscus.app/)
+  category_id: DIC_kwDONf_5Cc4ClYTN # leave empty or specify your category_id (see https://giscus.app/)
   mapping: title # identify discussions by post title
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
