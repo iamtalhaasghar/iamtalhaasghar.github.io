@@ -1,14 +1,13 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - iamtalhaasghar
 
-repo_description_lines_max: 2
+repo_description_lines_max: 3
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - iamtalhaasghar/yewtube
+  - iamtalhaasghar/adb-hacks-to-remove-android-bloatware
+  - iamtalhaasghar/spy-on-little-brother
+  - iamtalhaasghar/little-lemon-full-stack
+  - iamtalhaasghar/mass-unfollow-linkedin
+  - iamtalhaasghar/advent-of-code-2024
+  - iamtalhaasghar/meta-backend-capstone-project
