@@ -5,6 +5,7 @@ date: 2024-05-29 23:00:00 +0500
 categories: [Fediverse, Mastodon]
 tags: [mastodon, fediverse] # TAG names should always be lowercase
 featured: true
+giscus_comments: true
 ---
 
 ## A potential twitter alternative for global muslim ummah

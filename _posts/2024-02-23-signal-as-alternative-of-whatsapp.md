@@ -5,6 +5,7 @@ date: 2024-02-23 22:46:00 +0500
 categories: [free and open source software, messaging apps]
 tags: [signal, whatsapp, foss] # TAG names should always be lowercase
 featured: true
+giscus_comments: true
 ---
 
 ## Signal Messaging app
