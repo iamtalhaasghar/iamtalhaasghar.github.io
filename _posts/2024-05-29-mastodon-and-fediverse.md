@@ -3,7 +3,7 @@ layout: post
 title: Mastodon and Fediverse
 date: 2024-05-29 23:00:00 +0500
 categories: [Fediverse, Mastodon]
-tags: [mastodon, fediverse]     # TAG names should always be lowercase
+tags: [mastodon, fediverse] # TAG names should always be lowercase
 featured: true
 ---
 
@@ -19,8 +19,7 @@ Free and open source software abbreviated as FOSS is a software whose source cod
 
 ### What does Decentralised mean?
 
-Decentralisation is a concept which means a property, software, technology, asset or database which is not owned by a single entity rather it is controlled and managed by a community of people and they are free to administer it as they please. Decentralisation is the opposite of centralised software, property, technology, asset or database. In centralization the asset is controlled by a single entity or organisation. For example Meta controls facebook, Google controls youtube & open ai controls chat gpt. 
-
+Decentralisation is a concept which means a property, software, technology, asset or database which is not owned by a single entity rather it is controlled and managed by a community of people and they are free to administer it as they please. Decentralisation is the opposite of centralised software, property, technology, asset or database. In centralization the asset is controlled by a single entity or organisation. For example Meta controls facebook, Google controls youtube & open ai controls chat gpt.
 
 ### What does fediverse mean?
 
@@ -38,9 +37,6 @@ Reddit
 Lemmy
 Facebook
 Hubzilla / Friendica
-
-
-
 
 ### What benefits decentralised tech can have?
 
