@@ -53,7 +53,18 @@
       "startDate": "2017-09-01",
       "endDate": "2021-08-31",
       "score": "10",
-      "courses": ["Programming Fundamentals", "Object Oriented Programming", "Datastructures & Algorithms", "Computer Architecture & Organization", "Compiler Construction", "Computer Networks", "Machine Learning", "Linear Algebra", "Calculus", "Numerical Computation"]
+      "courses": [
+        "Programming Fundamentals",
+        "Object Oriented Programming",
+        "Datastructures & Algorithms",
+        "Computer Architecture & Organization",
+        "Compiler Construction",
+        "Computer Networks",
+        "Machine Learning",
+        "Linear Algebra",
+        "Calculus",
+        "Numerical Computation"
+      ]
     }
   ],
   "volunteer": [
@@ -134,6 +145,6 @@
       "language": "Urdu",
       "fluency": "Native speaker",
       "icon": ""
-    }    
-  ]  
+    }
+  ]
 }
