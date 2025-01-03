@@ -8,7 +8,6 @@ featured: true
 giscus_comments: true
 ---
 
-
 Sometimes, you need to copy or move files from one drive to another. Copying or moving files using `cp` / `mv` one by one can take considerable time some times days and weeks depending upon number of files, size of individual file and disk speed.
 
 Here's one way to speed up this process by using which you can copy / move millions of files concurrently from one directory to another in linux utilizing all CPU threads.
@@ -23,4 +22,4 @@ Break down of this command:
 
 You might have to install `parallel` package (using `apt`, `pacman`, `dnf`, `yum` or whatever package manager your distro has) if its not already installed. Its available in all main line linux distros.
 
-I learned this trick during my job as a backend developer. It can save you some time if you are trying to copy millions of large files from one drive to another. Sometimes, it can bring the copy / move time to hours from days and to days from weeks! 
+I learned this trick during my job as a backend developer. It can save you some time if you are trying to copy millions of large files from one drive to another. Sometimes, it can bring the copy / move time to hours from days and to days from weeks!
