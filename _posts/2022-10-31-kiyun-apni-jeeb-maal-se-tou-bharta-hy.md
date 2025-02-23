@@ -4,7 +4,7 @@ title: جیب
 date: 2022-10-31 17:27:33 +0000
 categories: ["poetry"]
 tags: ["urdu", "poetry"] # TAG names should always be lowercase
-featured: true
+featured: false
 giscus_comments: true
 ---
 

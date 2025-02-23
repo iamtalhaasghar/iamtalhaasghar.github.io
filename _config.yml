@@ -260,7 +260,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["foss", "fediverse", "linux", "how to"] # these tags will be displayed on the front page of your blog
-display_categories: ["backend story", "free and open source software", "poetry"] # these categories will be displayed on the front page of your blog
+display_categories: ["backend story", "free and open source software"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

@@ -4,7 +4,7 @@ title: How to copy or move millions of files concurrently in linux
 date: 2024-01-04 18:29:14 +0500
 categories: [linux, backend story]
 tags: [how to, linux, copy, files, move, concurrently, housekeeping] # TAG names should always be lowercase
-featured: true
+featured: false
 giscus_comments: true
 ---
 
