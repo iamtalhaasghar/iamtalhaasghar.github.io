@@ -81,12 +81,22 @@
     {
       "organization": "The Revivalists",
       "location": "Pakistan",
-      "position": "Head of Media and Assistant IT Manager",
+      "position": "Assistant IT Manager",
       "url": "https://the-revivalists.org/",
       "startDate": "2024-01-05",
       "endDate": "continued",
       "summary": "Volunteered with Mr. Qaiser Ahmed Raja to create a dedicated messaging platform for 'The Revivalists' community, addressing issues with WhatsApp bans and reports. Used open-source Element Messenger to build the platform. Assisted in deploying the Synapse backend server for seamless communication.",
       "highlights": ["Mobile Application", "Maintenance & Security of IT Infrastructure", "Social Media Growth"]
+    },
+    {
+      "organization": "The Revivalists",
+      "location": "Pakistan",
+      "position": "Head of Social Media",
+      "url": "https://the-revivalists.org/",
+      "startDate": "2024-08-01",
+      "endDate": "2025-01-08",
+      "summary": "Overseeing Official Media Team and helping the community grow their online presence.",
+      "highlights": ["Social Media Growth"]
     }
   ],
   "awards": [
