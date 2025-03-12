@@ -8,7 +8,7 @@ featured: true
 giscus_comments: true
 ---
 
-# Is it moral to priate stuff?
+# Is it moral to pirate stuff?
 
 I have been wondering about this question since early 2020. I never encouraged piracy (may be I did unintentionally and I seek Allah's forgiveness) even before 2020 but I used to pirate books and software prior to that myself (May Allah forgive me for this as well).
 But once I got familiarised with open source and linux world I started to question my past.
