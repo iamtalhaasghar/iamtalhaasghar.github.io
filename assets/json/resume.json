@@ -57,6 +57,15 @@
       "highlights": [
         "Developed an automated bot detection system using machine learning algorithms to identify and block fraudulent accounts on social platforms, leveraging and enhancing open-source solutions for improved accuracy and efficiency."
       ]
+    },
+    {
+      "name": "Fiverr",
+      "position": "Freelance Programmer and Consultant",
+      "url": "https://www.fiverr.com/talha220",
+      "startDate": "2018-10",
+      "endDate": "2021-11",
+      "summary": "java, c++, python, mysql, javafx, pyqt5, fastapi, django, flask, sqlalchemy, html, css, javascript, bootstrap",
+      "highlights": ["Successfully developed over 120+ projects for international clients, consistently earning a 5.0-star rating."]
     }
   ],
   "education": [
