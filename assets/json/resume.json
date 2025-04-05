@@ -24,12 +24,39 @@
   "work": [
     {
       "name": "Convergence Business Systems",
-      "position": "Software Engineer (Backend)",
+      "position": "Senior Software Engineer",
+      "url": "https://convergence.pk/",
+      "startDate": "2023-01",
+      "endDate": "continued",
+      "summary": "Python, Data Warehousing, Clickhouse, Freeswitch, Asterisk, linux, graffana, AWS Cloud, MySQL, Redis",
+      "highlights": [
+        "Maintained and refactored legacy code, ensuring stability, performance improvements, and smooth transitions to modern technologies.",
+        "Led the deployment of a Telecom Helpline Call Center solution, enhancing customer-agent interactions and creating a performance monitoring module for operational efficiency.",
+        "Managed company servers, ensuring uptime, security, and scalability while automating tasks for enhanced operational efficiency."
+      ]
+    },
+    {
+      "name": "Convergence Business Systems",
+      "position": "Associate Software Engineer",
       "url": "https://convergence.pk/",
       "startDate": "2021-11-10",
-      "endDate": "continued",
-      "summary": "Experienced in building ETL pipelines, data extraction, and cleaning to streamline operations. Skilled in call center management, server maintenance, automation, and data warehousing for efficient business solutions.",
-      "highlights": ["Python", "Data Warehousing", "Clickhouse", "Freeswitch", "Asterisk", "linux", "graffana", "AWS Cloud", "MySQL", "Redis"]
+      "endDate": "2023-01",
+      "summary": "python, web2py, django, flask, fastapi, AWS Cloud, mysql, mariadb, redis, linux, bash, monit, munin, tshark, wireshark",
+      "highlights": [
+        "Developed a highly efficient ETL pipeline, consolidating data into a 60TB Data Lake, significantly enhancing query speed and empowering the sales team with real-time insights.",
+        "Implemented automation solutions for server maintenance, including real-time alerts and automated client reports, improving system reliability and client satisfaction."
+      ]
+    },
+    {
+      "name": "Rapidev",
+      "position": "Machine Learning Engineer",
+      "url": "https://rapidev.com/",
+      "startDate": "2022-06",
+      "endDate": "2023-02",
+      "summary": "python, tensorflow, neo4j, machine learning, deep learning, nltk, NLP, pandas, numpy, mysql",
+      "highlights": [
+        "Developed an automated bot detection system using machine learning algorithms to identify and block fraudulent accounts on social platforms, leveraging and enhancing open-source solutions for improved accuracy and efficiency."
+      ]
     }
   ],
   "education": [
