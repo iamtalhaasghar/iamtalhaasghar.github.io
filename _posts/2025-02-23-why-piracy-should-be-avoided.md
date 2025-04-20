@@ -74,7 +74,6 @@ more of such material and content because he is getting attraction and traffic o
 Is Piracy Haram? - Dr. Zakir Naik (QnA)
 </div>
 
-
 In short, according to some scholars you can download books or softwares from internet that are pirated copies of someone's else work as long as you dont mass distribute or share them with anyone else and use them personally in non-commercially way only. There are other scholars who totally discourage this because your downloading of priated stuff encourages the site owner to continue piracy or do more piracy. So, by downloading such material you are also
 contributing your part in this sin.
 
