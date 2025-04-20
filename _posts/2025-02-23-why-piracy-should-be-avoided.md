@@ -51,12 +51,29 @@ The trickier part where Muslim scholars are divided is whether or not can you do
 
 Some Muslim Scholars that **allow downloading books and software from internet for personal use** argue that **you were not the one who stole those books and published them on internet**. So as long as **you are not mass distributing them the proof of burden on the Judgement Day will not be on you but instead on the person who put them on internet at the first place**. It is to be noted that these scholars allow only **non-commercial personal use** with the condition that you will not be mass distributing or sharing them in any shape or form.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=itBNcwRpvE4" target="_blank"><img src="http://img.youtube.com/vi/itBNcwRpvE4/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<div class="row justify-content-sm-center">
+    <a href="http://www.youtube.com/watch?feature=player_embedded&v=itBNcwRpvE4" target="_blank">
+        <img src="http://img.youtube.com/vi/itBNcwRpvE4/0.jpg" alt="Is it permissible to download books that are freely available on the internet? - Assim al hakeem" class="img-fluid rounded z-depth-1"/>    
+    </a>
+</div>
+
+<div class='caption'>
+Is it permissible to download books that are freely available on the internet? - Assim al hakeem
+</div>
 
 There are Muslim Scholars which **discourage downloading pirated books and software** from internet even for personal use. They argue that your **downloading of such material encourages the person running such piracy sites** to publish
 more of such material and content because he is getting attraction and traffic on his site which he can then monetize.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=cQaoFgg0u-o" target="_blank"><img src="http://img.youtube.com/vi/cQaoFgg0u-o/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<div class="row justify-content-sm-center">
+    <a href="http://www.youtube.com/watch?feature=player_embedded&v=cQaoFgg0u-o" target="_blank">
+        <img src="http://img.youtube.com/vi/cQaoFgg0u-o/0.jpg" alt="Is Piracy Haram? - Dr. Zakir Naik (QnA)" class="img-fluid rounded z-depth-1"/>    
+    </a>
+</div>
+
+<div class='caption'>
+Is Piracy Haram? - Dr. Zakir Naik (QnA)
+</div>
+
 
 In short, according to some scholars you can download books or softwares from internet that are pirated copies of someone's else work as long as you dont mass distribute or share them with anyone else and use them personally in non-commercially way only. There are other scholars who totally discourage this because your downloading of priated stuff encourages the site owner to continue piracy or do more piracy. So, by downloading such material you are also
 contributing your part in this sin.
