@@ -39,7 +39,7 @@ Signal desktop can be installed very easily on debian based distros (ubuntu, min
 
 [https://software.opensuse.org/download.html?project=network:im:signal&package=signal-desktop](https://software.opensuse.org/download.html?project=network:im:signal&package=signal-desktop)
 
-# Step 2 - Modify signal desktop application entry to route traffic through tor
+# Step 3 - Modify signal desktop application entry to route traffic through tor
 
 So in this step what we are going to do is that we will use linuxs' enviornment variable and make sure that all traffic goes through tor's socks5 proxy port. This needs to be done before signal desktop is launched. We will automate it in a bit but you can test it out in a terminal using following command:
 
@@ -48,14 +48,14 @@ So in this step what we are going to do is that we will use linuxs' enviornment 
 The default port where tor service listens for sock5 proxy traffic is 9050. What we are doing with this command is essentially
 telling signal desktop to use tor's sock5 proxy port 9050 for all incoming and outgoing connections. Thus, this makes signal desktop work like a charm.
 
-# Step 3 - modify signal desktop applications entry
+# Step 4 - modify signal desktop applications entry
 
 Now head over to `/usr/share/applications/signal-desktop.desktop` and modify the `Exec` paramater as following:
 `Exec=env https_proxy=socks5://127.0.0.1:9050 signal-desktop -- %u`
 
 With this what will happen is every time before you will run signal desktop automatically https_proxy will be injected and you won't have to do it manually.
 
-# Step 4 - run signal desktop
+# Step 5 - run signal desktop
 
 Now run signal desktop from start menu and it should run just fine and you won't have to add env variable for socks5 again and again before running it.
 
