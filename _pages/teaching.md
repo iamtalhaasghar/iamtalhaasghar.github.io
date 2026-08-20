@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: Relevant materials for courses, workshops or skill trainings I gave online or offline.
-nav: true
+nav: false
 nav_order: 6
 ---
 
