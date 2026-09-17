@@ -184,17 +184,17 @@ Wattz follows Material Design 3 with one guiding principle: **make electricity d
 
 ## Tech Stack {#tech-stack}
 
-| Component | Choice | Rationale |
-|-----------|--------|-----------|
-| Framework | React Native 0.85 + Expo SDK 56 | Native Android performance with cross-platform codebase |
-| Language | TypeScript | Type safety across navigation, database schemas, and components |
-| Styling | NativeWind | Tailwind-style utilities compiled at build time — zero runtime cost |
-| Database | expo-sqlite | Local-first SQL storage with no cloud dependency |
-| OCR | expo-mlkit-ocr | On-device text recognition; no API calls, no latency |
-| Navigation | Expo Router | File-based routing with compile-time typed routes |
-| Animations | React Native Reanimated 4 | Thread-safe animations that never block the JS thread |
-| Notifications | expo-notifications | Local scheduling for reading reminders without a backend |
-| Icons | @expo/vector-icons + FontAwesome | Consistent iconography across the app |
+| Component     | Choice                           | Rationale                                                           |
+| ------------- | -------------------------------- | ------------------------------------------------------------------- |
+| Framework     | React Native 0.85 + Expo SDK 56  | Native Android performance with cross-platform codebase             |
+| Language      | TypeScript                       | Type safety across navigation, database schemas, and components     |
+| Styling       | NativeWind                       | Tailwind-style utilities compiled at build time — zero runtime cost |
+| Database      | expo-sqlite                      | Local-first SQL storage with no cloud dependency                    |
+| OCR           | expo-mlkit-ocr                   | On-device text recognition; no API calls, no latency                |
+| Navigation    | Expo Router                      | File-based routing with compile-time typed routes                   |
+| Animations    | React Native Reanimated 4        | Thread-safe animations that never block the JS thread               |
+| Notifications | expo-notifications               | Local scheduling for reading reminders without a backend            |
+| Icons         | @expo/vector-icons + FontAwesome | Consistent iconography across the app                               |
 
 ---
 

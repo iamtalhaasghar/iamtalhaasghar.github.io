@@ -263,7 +263,9 @@ ul.task-list input[type="checkbox"] {
   border: none;
   border-radius: var(--radius-lg);
   box-shadow: var(--global-shadow-sm);
-  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
   overflow: hidden;
 
   &:hover {
@@ -311,7 +313,9 @@ ul.task-list input[type="checkbox"] {
     border-radius: var(--radius-lg);
     border: none;
     box-shadow: var(--global-shadow-md);
-    transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+    transition:
+      transform var(--duration-normal) var(--ease-out),
+      box-shadow var(--duration-normal) var(--ease-out);
 
     &:hover {
       transform: scale(1.02);
@@ -374,7 +378,9 @@ ul.task-list input[type="checkbox"] {
   background-color: transparent;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  transition: background-color var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+  transition:
+    background-color var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .navbar.scrolled {
@@ -428,7 +434,9 @@ ul.task-list input[type="checkbox"] {
     letter-spacing: 0.01em;
     border-radius: var(--radius-sm);
     padding: 0.4rem 0.75rem;
-    transition: color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
+    transition:
+      color var(--duration-fast) var(--ease-out),
+      background-color var(--duration-fast) var(--ease-out);
 
     &:hover {
       color: var(--global-hover-color);
@@ -442,7 +450,7 @@ ul.task-list input[type="checkbox"] {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 2px;
       left: 50%;
@@ -504,7 +512,9 @@ ul.task-list input[type="checkbox"] {
     background-color: var(--global-text-color);
     border-radius: 1px;
     margin-bottom: 5px;
-    transition: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+    transition:
+      transform var(--duration-fast) var(--ease-out),
+      opacity var(--duration-fast) var(--ease-out);
   }
 
   .top-bar {
@@ -570,7 +580,10 @@ ul.task-list input[type="checkbox"] {
       border-radius: var(--radius-md);
       background-color: var(--global-surface-color);
       border: 1px solid var(--global-border-color);
-      transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+      transition:
+        transform var(--duration-fast) var(--ease-out),
+        background-color var(--duration-fast) var(--ease-out),
+        box-shadow var(--duration-fast) var(--ease-out);
 
       @media (hover: hover) and (pointer: fine) {
         &:hover {
@@ -1088,7 +1101,11 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: background-color 300ms var(--ease-out), color 300ms var(--ease-out), border-color 300ms var(--ease-out), box-shadow 300ms var(--ease-out) !important;
+  transition:
+    background-color 300ms var(--ease-out),
+    color 300ms var(--ease-out),
+    border-color 300ms var(--ease-out),
+    box-shadow 300ms var(--ease-out) !important;
   transition-delay: 0 !important;
 }
 
@@ -1572,7 +1589,9 @@ ninja-keys::part(ninja-input-wrapper) {
     border-radius: var(--radius-md);
     background: var(--global-card-bg-color);
     margin-bottom: 0.75rem;
-    transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+    transition:
+      transform var(--duration-normal) var(--ease-out),
+      box-shadow var(--duration-normal) var(--ease-out);
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -1612,7 +1631,9 @@ ninja-keys::part(ninja-input-wrapper) {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  transition: opacity var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+  transition:
+    opacity var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -1694,12 +1715,16 @@ ninja-keys {
 
 // Icon transitions for navbar social
 .navbar-brand.social a i::before {
-  transition: color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
 }
 
 // Theme toggle animation
 #light-toggle i {
-  transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out);
 }
 
 // Reduced motion

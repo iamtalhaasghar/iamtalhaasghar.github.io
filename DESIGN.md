@@ -72,6 +72,7 @@ components: {}
 Cleanroom meets code editor. Every element has deliberate purpose. No decoration without function. The portfolio itself demonstrates the discipline it advertises — surgical precision, engineered confidence. The design is intentionally restrained: color appears only as signal, space is measured not accidental, typography carries hierarchy through weight not gimmick. The site's construction quality reflects the engineer's construction quality.
 
 **Key Characteristics:**
+
 - Deliberate, not decorated — every pixel has a reason
 - Color as signal, not noise — green for trust, blue for depth
 - Hierarchy through weight contrast — 400 vs 700, not size alone
@@ -84,16 +85,19 @@ Cleanroom meets code editor. Every element has deliberate purpose. No decoration
 The palette is technical and calibrated — like instruments in a cleanroom. Greens signal trust and precision; blues provide depth and authority. Neutrals are faintly cool, not stark white.
 
 ### Primary
+
 - **Calibrated Emerald** (#059669): Primary accent. Used for links, active states, theme color, social icon hover. Signals trust and precision.
 - **Emerald Light** (#d1fae5): Light tint. Used for tag backgrounds, success states, subtle highlights.
 - **Emerald Deep** (#047857): Darker variant. Used for hover states, emphasis on colored backgrounds.
 
 ### Secondary
+
 - **Technical Blue** (#0284c7): Secondary accent. Used for links in prose, reference citations, secondary actions. Provides depth without competing with primary.
 - **Blue Light** (#e0f2fe): Light tint. Used for info states, subtle highlights.
 - **Blue Deep** (#0369a1): Darker variant. Used for link hover states.
 
 ### Neutral
+
 - **Clean Paper** (#fafbfc): Page background. Faintly cool gray — like clean paper, not stark white.
 - **Instrument Surface** (#f1f5f9): Card backgrounds, secondary surfaces. Slightly more contrast than background.
 - **Precision Text** (#0f172a): Primary text. Deep slate for maximum authority and contrast.
@@ -101,6 +105,7 @@ The palette is technical and calibrated — like instruments in a cleanroom. Gre
 - **Calibrated Border** (#e2e8f0): Borders, dividers, subtle structure. Like blueprint grid lines.
 
 ### Dark Mode
+
 - **Deep Instrument** (#0b0e14): Page background. Near-black with slight blue undertone.
 - **Dark Surface** (#131720): Elevated surfaces, cards. Slightly lighter than background.
 - **Dark Card** (#161b24): Card backgrounds. Subtle lift from surface.
@@ -122,6 +127,7 @@ The palette is technical and calibrated — like instruments in a cleanroom. Gre
 **Character:** Inter is a neutral, geometric sans-serif designed for user interfaces. Using it for both display and body creates unity — the hierarchy comes from weight contrast (700 vs 400), not font family contrast. JetBrains Mono is a technical monospace designed for code, with ligatures and clear character distinction.
 
 ### Hierarchy
+
 - **Display** (700, clamp(2rem, 5vw, 3.5rem), 1.1): Hero headlines, page titles. Maximum authority through weight, not decoration.
 - **Headline** (600, clamp(1.25rem, 3vw, 1.75rem), 1.2): Section headings, card titles. Clear hierarchy from display.
 - **Body** (400, 1rem, 1.6): Prose, descriptions, general content. Optimized for 45-75ch measure.
@@ -139,16 +145,19 @@ The palette is technical and calibrated — like instruments in a cleanroom. Gre
 The layout is structured and predictable — like an engineering document. Content flows linearly with clear section boundaries. The primary reading path is vertical: profile → news → latest posts → publications.
 
 ### Spacing
+
 - **4px base scale:** All spacing is a multiple of 4px. This provides useful middle steps that an 8px-only scale misses.
 - **Tight groups, generous separation:** Related content (date + title + description) uses 4-8px gaps. Distinct sections use 24-48px gaps.
 - **More space above headings than below:** Section headings have more margin-top than margin-bottom, creating clear section boundaries.
 
 ### Grid
+
 - **Max content width:** 65ch for prose (optimal reading measure)
 - **Container:** Centered with responsive padding
 - **Responsive:** Single column on mobile, two-column on desktop where appropriate
 
 ### Density
+
 - **Moderate:** Not sparse (wastes space), not dense (overwhelms). Content density matches information value.
 - **White space as precision:** Empty space is deliberate, not accidental. It signals that the layout was engineered, not assembled.
 
@@ -163,6 +172,7 @@ The layout is structured and predictable — like an engineering document. Conte
 The system uses soft shadows for depth — offset + blur, never zero-offset glow. Shadows signal state (hover, focus, elevation), not decoration.
 
 ### Shadow Vocabulary
+
 - **Subtle** (`0 1px 2px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.08)`): Resting cards, inputs. Gentle lift from surface.
 - **Medium** (`0 4px 16px -4px rgba(0,0,0,0.28), 0 2px 6px -2px rgba(0,0,0,0.12)`): Hovered cards, dropdowns. Active state indication.
 - **Large** (`0 12px 40px -8px rgba(0,0,0,0.35), 0 4px 12px -4px rgba(0,0,0,0.15)`): Modals, elevated panels. High z-index surfaces.
@@ -179,6 +189,7 @@ The system uses soft shadows for depth — offset + blur, never zero-offset glow
 The form language is refined and consistent — not sharp (aggressive), not round (playful). Corners are gently curved at 8-16px radius.
 
 ### Radius Scale
+
 - **Small** (8px): Tags, badges, small controls. Tight, precise.
 - **Medium** (12px): Cards, inputs, dropdowns. Standard container radius.
 - **Large** (16px): Profile image, modal containers. Generous, approachable.
@@ -192,12 +203,14 @@ The form language is refined and consistent — not sharp (aggressive), not roun
 ## Components
 
 ### Profile Image
+
 - **Shape:** Rectangle with large radius (16px)
 - **Shadow:** Medium shadow at rest, large on hover
 - **Transition:** Subtle scale (1.02) and shadow change on hover
 - **Purpose:** Professional headshot, not casual avatar
 
 ### Timeline Items (News, Latest Posts)
+
 - **Shape:** No visible border. Background differentiation only.
 - **Background:** Card color on page background
 - **Shadow:** None at rest, medium on hover
@@ -205,23 +218,27 @@ The form language is refined and consistent — not sharp (aggressive), not roun
 - **Purpose:** Content cards, not decorative containers
 
 ### Social Icons
+
 - **Size:** 48px touch target
 - **Shape:** Circular with transparent background
 - **States:** Opacity gate (0.6 default, 1.0 hover), scale on active
 - **Purpose:** Contact actions, not decorative elements
 
 ### Section Headers
+
 - **Accent:** 4px vertical bar with gradient (green → blue)
 - **Typography:** Display weight (700), larger size
 - **Spacing:** More margin-top (2.5rem) than margin-bottom (1.5rem)
 - **Purpose:** Section boundaries, not decorative labels
 
 ### Date Badges
+
 - **Shape:** Small radius (8px), surface background
 - **Typography:** Mono font, small size, muted color
 - **Purpose:** Metadata, not visual decoration
 
 ### Cards (CV sections, project cards)
+
 - **Shape:** Medium radius (12px), card background
 - **Shadow:** Subtle at rest, medium on hover
 - **Border:** None (shadow provides depth)
@@ -230,6 +247,7 @@ The form language is refined and consistent — not sharp (aggressive), not roun
 ## Do's and Don'ts
 
 ### Do:
+
 - **Do** use weight contrast (400 vs 700) for hierarchy, not size alone
 - **Do** keep prose within 45-75ch measure
 - **Do** use shadows to indicate state (hover, focus), not decoration
@@ -240,6 +258,7 @@ The form language is refined and consistent — not sharp (aggressive), not roun
 - **Do** theme browser surfaces (selection, scrollbars, focus rings) from the palette
 
 ### Don't:
+
 - **Don't** use color decoratively — every colored element must communicate meaning
 - **Don't** use zero-offset colored shadows as depth — that's glow, not shadow
 - **Don't** use monospace font to make prose look "technical"

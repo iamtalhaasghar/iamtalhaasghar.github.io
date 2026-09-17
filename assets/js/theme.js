@@ -200,13 +200,13 @@ let setSearchTheme = (theme) => {
 
 let transTheme = () => {
   // Suppress transitions during theme swap to prevent smearing
-  document.documentElement.style.setProperty('transition', 'none', 'important');
-  document.documentElement.classList.add('transition');
+  document.documentElement.style.setProperty("transition", "none", "important");
+  document.documentElement.classList.add("transition");
   // Force reflow
   void document.documentElement.offsetHeight;
   window.setTimeout(() => {
-    document.documentElement.classList.remove('transition');
-    document.documentElement.style.removeProperty('transition');
+    document.documentElement.classList.remove("transition");
+    document.documentElement.style.removeProperty("transition");
   }, 500);
 };
 
