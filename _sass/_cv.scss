@@ -7,7 +7,7 @@
   .card {
     background-color: var(--global-card-bg-color);
     background-image: var(--global-surface-tint);
-    border: 1px solid var(--global-border-color);
+    border: none;
     border-radius: var(--radius-lg);
     box-shadow: var(--global-shadow-sm);
     overflow: hidden;

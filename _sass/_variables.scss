@@ -51,31 +51,31 @@ $dev-border-dark: rgba(255, 255, 255, 0.08) !default;
 $dev-border-dark-strong: rgba(255, 255, 255, 0.16) !default;
 
 // Light surfaces
-$dev-bg-light: #f7f8fa !default;
-$dev-card-light: #ffffff !default;
-$dev-border-light: rgba(15, 23, 42, 0.09) !default;
+$dev-bg-light: #fafbfc !default; // Instrument Panel: faint cool gray
+$dev-card-light: #f1f5f9 !default; // Instrument Panel: instrument surface
+$dev-border-light: #e2e8f0 !default; // Instrument Panel: calibrated border
 
-// Brand accents
-$dev-accent-green: #00e599 !default; // primary terminal green
-$dev-accent-green-deep: #00b878 !default; // light-mode-safe green
-$dev-accent-blue: #4cc9ff !default; // gradient partner
-$dev-accent-gradient: linear-gradient(135deg, #00e599 0%, #4cc9ff 100%) !default;
+// Brand accents (Instrument Panel)
+$dev-accent-green: #059669 !default; // calibrated emerald — primary trust signal
+$dev-accent-green-deep: #047857 !default; // deeper variant for hover states
+$dev-accent-blue: #0284c7 !default; // technical blue — secondary depth signal
+$dev-accent-gradient: linear-gradient(135deg, #059669 0%, #0284c7 100%) !default;
 
-// Text
-$dev-text-dark: #e6e8ee !default;
-$dev-text-muted-dark: #9aa3b2 !default;
-$dev-text-light: #16181d !default;
-$dev-text-muted-light: #5b6472 !default;
+// Text (Instrument Panel)
+$dev-text-dark: #e6e8ee !default; // bright readout — dark mode primary
+$dev-text-muted-dark: #9aa3b2 !default; // muted dark — dark mode secondary
+$dev-text-light: #0f172a !default; // precision text — light mode primary
+$dev-text-muted-light: #475569 !default; // muted readout — light mode secondary
 
 // Shadows
 $dev-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08) !default;
 $dev-shadow-md: 0 4px 16px -4px rgba(0, 0, 0, 0.28), 0 2px 6px -2px rgba(0, 0, 0, 0.12) !default;
 $dev-shadow-lg: 0 12px 40px -8px rgba(0, 0, 0, 0.35), 0 4px 12px -4px rgba(0, 0, 0, 0.15) !default;
-$dev-shadow-glow: 0 0 0 1px rgba(0, 229, 153, 0.1), 0 4px 20px -4px rgba(0, 229, 153, 0.12) !default;
+$dev-shadow-glow: 0 0 0 1px rgba(5, 150, 105, 0.1), 0 4px 20px -4px rgba(5, 150, 105, 0.12) !default;
 
-// Fonts
+// Fonts (Precision Engineer)
 $dev-font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
-$dev-font-display: "Space Grotesk", $dev-font-body !default;
+$dev-font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
 $dev-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !default;
 
 // Font awesome location

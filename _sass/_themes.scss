@@ -33,7 +33,7 @@
 
   // New tokens used across the theme
   --global-surface-color: #{$dev-card-light};
-  --global-surface-hover: #f1f5f9;
+  --global-surface-hover: #e2e8f0;
   --global-border-color: #{$dev-border-light};
   --global-accent: #{$dev-accent-green};
   --global-accent-deep: #{$dev-accent-green-deep};
@@ -42,7 +42,7 @@
   --global-font-body: #{$dev-font-body};
   --global-font-display: #{$dev-font-display};
   --global-font-mono: #{$dev-font-mono};
-  --global-glow: #{0 0 0 1px rgba(0, 184, 120, 0.1), 0 4px 20px -4px rgba(0, 184, 120, 0.12)};
+  --global-glow: #{0 0 0 1px rgba(5, 150, 105, 0.1), 0 4px 20px -4px rgba(5, 150, 105, 0.12)};
 
   // Animation tokens
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);

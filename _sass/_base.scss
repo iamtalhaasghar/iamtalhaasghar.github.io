@@ -12,6 +12,49 @@ body {
   line-height: 1.65;
 }
 
+// Browser surfaces — themed from the palette (craft floor requirement)
+::selection {
+  background: rgba(5, 150, 105, 0.2); // primary green tint
+  color: var(--global-text-color);
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--global-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--global-border-color);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--global-text-color-light);
+  }
+}
+
+// Firefox scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-border-color) var(--global-bg-color);
+}
+
+// Focus ring — visible, themed, keyboard-only
+:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+// Remove default focus ring for mouse users
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -217,7 +260,7 @@ ul.task-list input[type="checkbox"] {
 .card {
   background-color: var(--global-card-bg-color);
   background-image: var(--global-surface-tint);
-  border: 1px solid var(--global-border-color);
+  border: none;
   border-radius: var(--radius-lg);
   box-shadow: var(--global-shadow-sm);
   transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
@@ -266,12 +309,13 @@ ul.task-list input[type="checkbox"] {
 
   img {
     border-radius: var(--radius-lg);
-    border: 1px solid var(--global-border-color);
+    border: none;
+    box-shadow: var(--global-shadow-md);
     transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
 
     &:hover {
       transform: scale(1.02);
-      box-shadow: var(--global-shadow-md);
+      box-shadow: var(--global-shadow-lg);
     }
   }
 
