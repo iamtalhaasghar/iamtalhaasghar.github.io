@@ -1,70 +1,84 @@
-/*****************************
- * CV shared styles
- *****************************/
+/*******************************************************************************
+ * CV / Resume — Modern Styles
+ ******************************************************************************/
 
-div.container-link-button {
-  margin-right: 0.5rem;
+// Section wrapper
+.cv {
+  .card {
+    background-color: var(--global-card-bg-color);
+    background-image: var(--global-surface-tint);
+    border: 1px solid var(--global-border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--global-shadow-sm);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1.75rem;
+
+    @media (max-width: 576px) {
+      padding: 1.25rem 1rem;
+    }
+  }
+
+  .card-title {
+    font-family: var(--global-font-display);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--global-text-color-light);
+    border-left: 3px solid var(--global-accent);
+    padding-left: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
-table.table-cv {
-  background-color: transparent !important;
-}
-
-a.btncv {
-  color: var(--global-text-color) !important;
-  border: 1px solid var(--global-text-color) !important;
-  border-radius: 0.125rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  text-decoration: none;
-  font-weight: 400;
+// Date badges
+.badge.font-weight-bold {
+  background-color: var(--global-theme-color) !important;
+  color: var(--global-bg-color) !important;
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.65rem;
   font-size: 0.7rem;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  white-space: nowrap;
+  font-family: var(--global-font-mono);
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
 }
 
-a.btncv:hover {
-  color: var(--global-theme-color) !important;
-  border-color: var(--global-theme-color) !important;
-  text-decoration: none !important;
-}
-
-/*****************************
- * CV TIME_TABLE styles
- *****************************/
-
+// Location
 p.location {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  color: var(--global-text-color-light);
   white-space: nowrap;
+  margin: 0.25rem 0 0 0;
 }
 
 i.iconlocation {
-  color: var(--global-theme-color);
-  font-size: 0.8rem;
+  color: var(--global-accent);
+  font-size: 0.7rem;
+  margin-right: 0.2rem;
 }
 
 i.iconinstitution {
-  color: var(--global-theme-color);
+  color: var(--global-accent);
   font-size: 0.95rem;
   margin-right: 0.3rem;
 }
 
 i.icondepartment {
-  color: var(--global-theme-color);
+  color: var(--global-accent);
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
 
-table.institution {
-  margin-bottom: 1rem;
+// Table CV base
+table.table-cv {
+  background-color: transparent !important;
+  margin-bottom: 0;
 }
 
-td.department {
-  font-size: 0.8rem;
+// Container for links / PDFs
+div.container-link-button {
+  margin-right: 0.5rem;
 }
 
 div.container-links {
@@ -75,11 +89,8 @@ div.container-links {
   justify-content: flex-start;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  gap: 0.5rem;
 }
-
-/*****************************
- * CV MAP styles
- *****************************/
 
 div.container-pdf {
   display: flex;
@@ -87,18 +98,142 @@ div.container-pdf {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+  gap: 0.5rem;
 }
 
-/*****************************
- * CV LIST_GROUPS styles
- *****************************/
+// CV buttons
+a.btncv {
+  color: var(--global-text-color) !important;
+  border: 1px solid var(--global-border-color) !important;
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.85rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+
+  &:hover {
+    color: var(--global-theme-color) !important;
+    border-color: var(--global-theme-color) !important;
+    text-decoration: none !important;
+  }
+}
+
+/*******************************************************************************
+ * Work / Education / Volunteer / Awards — Timeline entries
+ ******************************************************************************/
+
+ul.card-text.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--global-border-color) !important;
+  padding: 1.25rem 0.5rem;
+  transition: background-color var(--duration-fast) var(--ease-out),
+    border-radius var(--duration-fast) var(--ease-out);
+  border-radius: var(--radius-sm) !important;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--global-surface-hover) !important;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+}
+
+// Date column
+.date-column {
+  vertical-align: top;
+}
+
+// Title / position
+h6.title {
+  font-family: var(--global-font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+
+  a {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+// Company / institution name
+h6.ml-1,
+h6.ml-md-4 {
+  font-family: var(--global-font-body);
+
+  &[style*="font-style: italic"] {
+    font-family: var(--global-font-mono);
+    font-size: 0.82rem !important;
+    color: var(--global-text-color-light);
+    font-style: normal !important;
+    margin-top: 0.35rem;
+  }
+}
+
+// Highlight bullets
+ul.items {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+
+  li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--global-text-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--global-accent);
+    }
+  }
+
+  .item {
+    color: var(--global-text-color);
+  }
+}
+
+/*******************************************************************************
+ * Skills — Tag grid
+ ******************************************************************************/
 
 div.list-groups {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-direction: row;
-  align-content: center;
+  align-content: flex-start;
+  gap: 1.5rem;
 }
 
 div.list-group {
@@ -106,48 +241,137 @@ div.list-group {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+
+  // Remove old margin that created uneven spacing
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 td.list-group-category {
   color: var(--global-theme-color);
+  font-family: var(--global-font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--global-border-color);
 }
 
 td.list-group-category-icon {
-  font-size: 0.8rem;
-  color: var(--global-theme-color);
-  width: 1.4rem;
+  font-size: 0.85rem;
+  color: var(--global-accent);
+  width: 1.6rem;
   padding-right: 0.4rem;
 }
 
 td.list-group-name {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  padding: 0.15rem 0;
+
+  b {
+    font-weight: 500;
+  }
 }
 
 td.list-group-level {
   font-size: 0.8rem;
   padding-left: 0.5rem;
+  color: var(--global-text-color-light);
 }
 
 td.list-group-school {
   font-size: 0.7rem;
   padding-left: 0.5rem;
   text-align: center;
+  color: var(--global-text-color-light);
 }
 
 p.list-group-time {
   font-size: 0.7rem;
   padding-left: 0.5rem;
+  color: var(--global-text-color-light);
 }
 
 td.list-group-link {
   padding-left: 0.5rem;
 }
 
-/*****************************
- * CV TOC styles
- *****************************/
+// Skill keyword chips
+table.list-group-table {
+  tbody tr {
+    td {
+      padding: 0.1rem 0;
+    }
+  }
+}
+
+/*******************************************************************************
+ * Certificates — Card grid
+ ******************************************************************************/
+
+.certificate-item {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  transition: transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--global-shadow-sm);
+    }
+  }
+}
+
+/*******************************************************************************
+ * Awards — Gold medal treatment
+ ******************************************************************************/
+
+.award-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  i.fa-trophy {
+    color: #f59e0b;
+    font-size: 0.95rem;
+  }
+}
+
+/*******************************************************************************
+ * Languages — Clean list
+ ******************************************************************************/
+
+div.list-groups.languages-list {
+  gap: 2rem;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .language-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .language-fluency {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    font-family: var(--global-font-mono);
+  }
+}
+
+/*******************************************************************************
+ * TOC (Table of Contents) sidebar
+ ******************************************************************************/
 
 a.anchor {
   display: block;
@@ -159,57 +383,103 @@ a.anchor {
 ul.timeline {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
 
-ul.timeline li {
-  position: relative;
-  min-height: 2.2rem;
-  color: var(--global-text-color);
-  list-style-position: inside;
+  li {
+    position: relative;
+    min-height: 2.2rem;
+    color: var(--global-text-color);
+    list-style-position: inside;
+
+    &::before {
+      content: "";
+      min-height: 2.5rem;
+      width: 1px;
+      background: var(--global-border-color);
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 2px;
+      top: -0.5rem;
+    }
+  }
 }
 
 span.badge-toc {
   color: var(--global-bg-color);
   background-color: var(--global-theme-color);
-  border-radius: 0.125rem;
-  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.6rem;
   font-weight: 700 !important;
   display: inline-block;
   inline-size: fit-content;
+  font-size: 0.75rem;
 }
 
-ul.timeline li::before {
-  content: "";
-  min-height: 2.5rem;
-  width: 1px;
-  background: var(--global-text-color);
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 2px;
-  top: -0.5rem;
+/*******************************************************************************
+ * PDF Download Button
+ ******************************************************************************/
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--global-glow);
+      color: var(--global-bg-color);
+      text-decoration: none;
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  i {
+    font-size: 0.9rem;
+  }
 }
 
-/*ul.timeline::before {
-     content: "●";
-     font-size: 1em;
-     display: inline-block;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: -2px;
-     top: 0.4rem;
-     color: var(--global-text-color);
+/*******************************************************************************
+ * Basics — Contact info
+ ******************************************************************************/
+
+.basics-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+
+  .contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color);
+
+    i {
+      color: var(--global-accent);
+      font-size: 0.8rem;
+    }
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
 }
- ul.timeline::after {
-     content: "●";
-     font-size: 1em;
-     display: inline-block;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: -2px;
-     top: -1rem;
-     color: var(--global-text-color);
-}
-*/
