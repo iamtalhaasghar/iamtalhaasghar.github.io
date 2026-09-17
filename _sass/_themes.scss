@@ -42,7 +42,20 @@
   --global-font-body: #{$dev-font-body};
   --global-font-display: #{$dev-font-display};
   --global-font-mono: #{$dev-font-mono};
-  --global-glow: #{0 0 0 1px rgba(0, 184, 120, 0.18), 0 8px 40px -8px rgba(0, 184, 120, 0.2)};
+  --global-glow: #{0 0 0 1px rgba(0, 184, 120, 0.1), 0 4px 20px -4px rgba(0, 184, 120, 0.12)};
+
+  // Animation tokens
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+
+  // Surface tint for dark mode cards
+  --global-surface-tint: transparent;
+  --global-shadow-sm: #{$dev-shadow-sm};
+  --global-shadow-md: #{$dev-shadow-md};
+  --global-shadow-lg: #{$dev-shadow-lg};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -128,6 +141,12 @@ html[data-theme="dark"] {
   --global-font-display: #{$dev-font-display};
   --global-font-mono: #{$dev-font-mono};
   --global-glow: #{$dev-shadow-glow};
+
+  // Surface tint for dark mode — subtle blue-ish tint on cards
+  --global-surface-tint: rgba(76, 201, 255, 0.03);
+  --global-shadow-sm: #{$dev-shadow-sm};
+  --global-shadow-md: #{$dev-shadow-md};
+  --global-shadow-lg: #{$dev-shadow-lg};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
