@@ -380,7 +380,7 @@ a.anchor {
   visibility: hidden;
 }
 
-ul.timeline {
+.cv ul.timeline {
   margin-top: 2rem;
   margin-bottom: 2rem;
 
@@ -389,18 +389,6 @@ ul.timeline {
     min-height: 2.2rem;
     color: var(--global-text-color);
     list-style-position: inside;
-
-    &::before {
-      content: "";
-      min-height: 2.5rem;
-      width: 1px;
-      background: var(--global-border-color);
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      left: 2px;
-      top: -0.5rem;
-    }
   }
 }
 

@@ -1524,7 +1524,7 @@ ninja-keys::part(ninja-input-wrapper) {
   .timeline-item {
     position: relative;
     padding: 1rem 1.25rem;
-    border: 1px solid var(--global-border-color);
+    border: none;
     border-radius: var(--radius-md);
     background: var(--global-card-bg-color);
     margin-bottom: 0.75rem;
