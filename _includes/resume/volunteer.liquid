@@ -41,7 +41,9 @@
           {% if content.highlights.size > 0 %}
             <div class="ml-1 ml-md-4 mt-2" style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
               {% for item in content.highlights %}
-                <span style="font-size: 0.75rem; padding: 0.15rem 0.5rem; border: 1px solid var(--global-border-color); border-radius: 999px; color: var(--global-text-color-light);">{{ item }}</span>
+                <span style="font-size: 0.75rem; padding: 0.15rem 0.5rem; border: 1px solid var(--global-border-color); border-radius: 999px; color: var(--global-text-color-light);">
+                  {{- item -}}
+                </span>
               {% endfor %}
             </div>
           {% endif %}

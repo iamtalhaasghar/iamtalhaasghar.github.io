@@ -10,7 +10,10 @@
             </div>
           {% endif %}
           <div style="flex: 1;">
-            <a href="{{ content.url | default: '#' }}" style="font-weight: 600; color: var(--global-text-color); text-decoration: none; font-size: 0.9rem;">
+            <a
+              href="{{ content.url | default: '#' }}"
+              style="font-weight: 600; color: var(--global-text-color); text-decoration: none; font-size: 0.9rem;"
+            >
               {{ content.name }}
             </a>
             <div style="font-size: 0.82rem; color: var(--global-text-color-light); margin-top: 0.15rem;">

@@ -68,14 +68,32 @@ $dev-text-light: #0f172a !default; // precision text — light mode primary
 $dev-text-muted-light: #475569 !default; // muted readout — light mode secondary
 
 // Shadows
-$dev-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08) !default;
-$dev-shadow-md: 0 4px 16px -4px rgba(0, 0, 0, 0.28), 0 2px 6px -2px rgba(0, 0, 0, 0.12) !default;
-$dev-shadow-lg: 0 12px 40px -8px rgba(0, 0, 0, 0.35), 0 4px 12px -4px rgba(0, 0, 0, 0.15) !default;
-$dev-shadow-glow: 0 0 0 1px rgba(5, 150, 105, 0.1), 0 4px 20px -4px rgba(5, 150, 105, 0.12) !default;
+$dev-shadow-sm:
+  0 1px 2px rgba(0, 0, 0, 0.12),
+  0 1px 3px rgba(0, 0, 0, 0.08) !default;
+$dev-shadow-md:
+  0 4px 16px -4px rgba(0, 0, 0, 0.28),
+  0 2px 6px -2px rgba(0, 0, 0, 0.12) !default;
+$dev-shadow-lg:
+  0 12px 40px -8px rgba(0, 0, 0, 0.35),
+  0 4px 12px -4px rgba(0, 0, 0, 0.15) !default;
+$dev-shadow-glow:
+  0 0 0 1px rgba(5, 150, 105, 0.1),
+  0 4px 20px -4px rgba(5, 150, 105, 0.12) !default;
 
 // Fonts (Precision Engineer)
-$dev-font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
-$dev-font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
+$dev-font-body:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif !default;
+$dev-font-display:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif !default;
 $dev-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !default;
 
 // Font awesome location
