@@ -18,12 +18,10 @@ body {
 }
 
 body.fixed-top-nav {
-  // Add some padding for the nav-bar.
   padding-top: 56px;
 }
 
 body.sticky-bottom-footer {
-  // Remove padding below footer.
   padding-bottom: 0;
 }
 
@@ -31,23 +29,225 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
-// Profile
-.profile {
-  img {
-    width: 100%;
+/******************************************************************************
+ * Hero / About
+ ******************************************************************************/
+
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-header .post-title {
+  font-family: var(--global-font-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+
+  span {
+    background: var(--global-accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
-// TODO: redefine content layout.
+.post-header .desc {
+  color: var(--global-text-color-light);
+  font-family: var(--global-font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-top: 0.25rem;
+}
+
+.post {
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.post h2 {
+  font-family: var(--global-font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.post h3 {
+  font-family: var(--global-font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
 
 /******************************************************************************
  * Publications
  ******************************************************************************/
 
-// TODO: redefine publications layout.
+.publications {
+  margin-top: 2rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2.bibliography {
+    color: var(--global-text-color-light);
+    border-top: 1px solid var(--global-border-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    text-align: right;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 1rem;
+
+      .abbr {
+        margin-bottom: 0.5rem;
+
+        abbr {
+          display: inline-block;
+          background-color: var(--global-theme-color);
+          margin-bottom: 0.5rem;
+          border-radius: 4px;
+
+          a {
+            color: white;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .award {
+          color: var(--global-theme-color) !important;
+          border: 1px solid var(--global-theme-color);
+          border-radius: 4px;
+        }
+      }
+
+      .title {
+        font-weight: bolder;
+      }
+
+      .author {
+        a {
+          border-bottom: 1px dashed var(--global-theme-color);
+
+          &:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+          }
+        }
+
+        > em {
+          border-bottom: 1px solid;
+          font-style: normal;
+        }
+
+        > span.more-authors {
+          color: var(--global-text-color-light);
+          border-bottom: 1px dashed var(--global-text-color-light);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--global-text-color);
+            border-bottom: 1px dashed var(--global-text-color);
+          }
+        }
+      }
+
+      .links {
+        a.btn {
+          color: var(--global-text-color);
+          border: 1px solid var(--global-text-color);
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          margin-left: 0;
+          border-radius: 8px;
+          transition: color 0.2s ease, border-color 0.2s ease;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
+        }
+        a.award.btn {
+          border-color: var(--global-highlight-color);
+        }
+      }
+    }
+  }
+}
 
 /*****************************************************************************
-* Projects
-*****************************************************************************/
+ * Projects
+ *****************************************************************************/
 
-// TODO: redefine projects layout.
+.projects {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      .card-title {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .card {
+    img {
+      width: 100%;
+    }
+  }
+
+  .col {
+    padding-bottom: 1rem;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    width: 250px;
+    margin-bottom: 10px;
+  }
+
+  h2.category {
+    color: var(--global-divider-color);
+    border-bottom: 1px solid var(--global-border-color);
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+}

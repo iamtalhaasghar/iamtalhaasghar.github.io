@@ -4,21 +4,23 @@
 
 @use "sass:color";
 
+// Shared design tokens (modern dev aesthetic, dark-first).
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-bg-color: #{$dev-bg-light};
+  --global-bg-image: #{$dev-bg-light};
+  --global-code-bg-color: #{$dev-card-dark};
+  --global-text-color: #{$dev-text-light};
+  --global-text-color-light: #{$dev-text-muted-light};
+  --global-theme-color: #{$dev-accent-green-deep};
+  --global-hover-color: #{$dev-accent-green-deep};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-footer-bg-color: #{$dev-bg-dark};
+  --global-footer-text-color: #{$dev-text-muted-dark};
+  --global-footer-link-color: #{$dev-accent-green};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{$white-color};
-  --global-highlight-color: #{$red-color-dark};
+  --global-divider-color: #{$dev-border-light};
+  --global-card-bg-color: #{$dev-card-light};
+  --global-highlight-color: #{$dev-accent-green-deep};
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -28,6 +30,19 @@
   --global-back-to-top-text-color: #{$white-color};
   --global-newsletter-bg-color: #{$white-color};
   --global-newsletter-text-color: #{$black-color};
+
+  // New tokens used across the theme
+  --global-surface-color: #{$dev-card-light};
+  --global-surface-hover: #f1f5f9;
+  --global-border-color: #{$dev-border-light};
+  --global-accent: #{$dev-accent-green};
+  --global-accent-deep: #{$dev-accent-green-deep};
+  --global-accent-blue: #{$dev-accent-blue};
+  --global-accent-gradient: #{$dev-accent-gradient};
+  --global-font-body: #{$dev-font-body};
+  --global-font-display: #{$dev-font-display};
+  --global-font-mono: #{$dev-font-mono};
+  --global-glow: #{0 0 0 1px rgba(0, 184, 120, 0.18), 0 8px 40px -8px rgba(0, 184, 120, 0.2)};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -75,29 +90,44 @@
   }
 }
 
+// ---------------------------------------------------------------------------
+// Dark theme — the flagship modern look
+// ---------------------------------------------------------------------------
 html[data-theme="dark"] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  --global-bg-color: #{$dev-bg-dark};
+  --global-code-bg-color: #{$dev-card-dark};
+  --global-text-color: #{$dev-text-dark};
+  --global-text-color-light: #{$dev-text-muted-dark};
+  --global-theme-color: #{$dev-accent-green};
+  --global-hover-color: #{$dev-accent-green};
+  --global-hover-text-color: #{$dev-bg-dark};
+  --global-footer-bg-color: #{$dev-bg-dark-2};
+  --global-footer-text-color: #{$dev-text-muted-dark};
+  --global-footer-link-color: #{$dev-accent-green};
+  --global-distill-app-color: #{$dev-text-muted-dark};
+  --global-divider-color: #{$dev-border-dark};
+  --global-card-bg-color: #{$dev-card-dark};
   --global-back-to-top-bg-color: rgba(
-    #{color.channel($white-color, "red", $space: rgb)},
-    #{color.channel($white-color, "green", $space: rgb)},
-    #{color.channel($white-color, "blue", $space: rgb)},
-    0.5
+    #{color.channel($dev-accent-green, "red", $space: rgb)},
+    #{color.channel($dev-accent-green, "green", $space: rgb)},
+    #{color.channel($dev-accent-green, "blue", $space: rgb)},
+    0.18
   );
-  --global-back-to-top-text-color: #{$black-color};
-  --global-newsletter-bg-color: #{$grey-color-light};
-  --global-newsletter-text-color: #{$grey-color-dark};
+  --global-back-to-top-text-color: #{$dev-accent-green};
+  --global-newsletter-bg-color: #{$dev-card-dark};
+  --global-newsletter-text-color: #{$dev-text-dark};
+
+  --global-surface-color: #{$dev-surface-dark};
+  --global-surface-hover: #{$dev-card-dark-2};
+  --global-border-color: #{$dev-border-dark};
+  --global-accent: #{$dev-accent-green};
+  --global-accent-deep: #{$dev-accent-green-deep};
+  --global-accent-blue: #{$dev-accent-blue};
+  --global-accent-gradient: #{$dev-accent-gradient};
+  --global-font-body: #{$dev-font-body};
+  --global-font-display: #{$dev-font-display};
+  --global-font-mono: #{$dev-font-mono};
+  --global-glow: #{$dev-shadow-glow};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
