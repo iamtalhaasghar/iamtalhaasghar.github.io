@@ -26,3 +26,5 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
+
+gem "observer", "~> 0.1.2"
