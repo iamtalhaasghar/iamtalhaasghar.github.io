@@ -16,7 +16,7 @@
             <tbody>
               <tr>
                 <td>
-                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
+                  <span class="badge font-weight-bold text-uppercase align-middle"> {{ date }} </span>
                 </td>
               </tr>
               {% if content.location %}
@@ -37,14 +37,14 @@
             <a href="{{ content.url }}">{{ content.position }}</a>
           </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.organization }}</h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
-          <ul class="items">
-            {% for item in content.highlights %}
-              <li>
-                <span class="item">{{ item }}</span>
-              </li>
-            {% endfor %}
-          </ul>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.82rem; font-style: italic">{{ content.summary }}</h6>
+          {% if content.highlights.size > 0 %}
+            <div class="ml-1 ml-md-4 mt-2" style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+              {% for item in content.highlights %}
+                <span style="font-size: 0.75rem; padding: 0.15rem 0.5rem; border: 1px solid var(--global-border-color); border-radius: 999px; color: var(--global-text-color-light);">{{ item }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </li>

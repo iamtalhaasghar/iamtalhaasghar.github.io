@@ -4,6 +4,84 @@
 
 // Typography
 
+body {
+  font-family: var(--global-font-body);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.65;
+}
+
+// Browser surfaces — themed from the palette (craft floor requirement)
+::selection {
+  background: rgba(5, 150, 105, 0.2); // primary green tint
+  color: var(--global-text-color);
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--global-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--global-border-color);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--global-text-color-light);
+  }
+}
+
+// Firefox scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-border-color) var(--global-bg-color);
+}
+
+// Focus ring — visible, themed, keyboard-only
+:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+// Remove default focus ring for mouse users
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: var(--global-font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 p,
 h1,
 h2,
@@ -19,6 +97,13 @@ strong {
   color: var(--global-text-color);
 }
 
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--global-font-mono);
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -28,6 +113,7 @@ table {
   th {
     font-size: 1rem;
     padding: 1px 1rem 1px 0;
+    font-variant-numeric: tabular-nums;
   }
 
   th {
@@ -38,6 +124,9 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 2px;
+  transition: color var(--duration-fast) var(--ease-out);
 
   &:hover {
     color: var(--global-theme-color);
@@ -57,11 +146,13 @@ table.table a {
 }
 
 blockquote {
-  background: var(--global-bg-color);
-  border-left: 5px solid var(--global-theme-color);
+  background: var(--global-surface-color);
+  border-left: 2px solid var(--global-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
   margin: 1.5em 0;
-  padding: 1em;
-  font-size: 1.2rem;
+  padding: 1.15em 1.25em;
+  font-size: 1.15rem;
+  box-shadow: var(--global-shadow-sm);
 
   p {
     margin-bottom: 0;
@@ -168,18 +259,38 @@ ul.task-list input[type="checkbox"] {
 
 .card {
   background-color: var(--global-card-bg-color);
+  background-image: var(--global-surface-tint);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--global-shadow-sm);
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--global-shadow-md);
+  }
 
   .card-img {
     width: 100%;
     padding-top: 1.25rem;
+
+    // Subtle outline for consistent depth
+    img {
+      outline: 1px solid var(--global-border-color);
+      outline-offset: -1px;
+    }
   }
 
   .card-title {
     color: var(--global-text-color);
+    font-family: var(--global-font-display);
+    font-weight: 600;
+    text-wrap: balance;
   }
 
   .card-body {
-    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    padding: 1.25rem;
   }
 }
 
@@ -194,11 +305,25 @@ ul.task-list input[type="checkbox"] {
 
 .profile {
   width: 100%;
+  position: relative;
+
+  img {
+    border-radius: var(--radius-lg);
+    border: none;
+    box-shadow: var(--global-shadow-md);
+    transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: var(--global-shadow-lg);
+    }
+  }
 
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: var(--global-font-mono);
+    font-size: 0.85rem;
 
     p {
       display: inline-block;
@@ -246,13 +371,23 @@ ul.task-list input[type="checkbox"] {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
+  background-color: transparent;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transition: background-color var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.navbar.scrolled {
   background-color: var(--global-bg-color);
-  opacity: 0.95;
+  box-shadow: var(--global-shadow-sm);
 }
 
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
   border: 1px solid var(--global-divider-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--global-shadow-md);
+  overflow: hidden;
 
   a:not(.active) {
     color: var(--global-text-color);
@@ -289,19 +424,37 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.75rem;
+    transition: color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
 
     &:hover {
       color: var(--global-hover-color);
+      background-color: var(--global-surface-hover);
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
-    background-color: inherit;
-    font-weight: bolder;
     color: var(--global-theme-color);
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 2px;
+      background-color: var(--global-theme-color);
+      border-radius: 1px;
+    }
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-theme-color);
     }
   }
 
@@ -346,12 +499,12 @@ ul.task-list input[type="checkbox"] {
 .navbar-toggler {
   .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: 20px;
+    height: 1.5px;
     background-color: var(--global-text-color);
     border-radius: 1px;
-    margin-bottom: 4px;
-    transition: all 0.2s;
+    margin-bottom: 5px;
+    transition: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
   }
 
   .top-bar {
@@ -401,43 +554,70 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 
     a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background-color: var(--global-surface-color);
+      border: 1px solid var(--global-border-color);
+      transition: transform var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          transform: translateY(-2px);
+          background-color: var(--global-theme-color);
+          box-shadow: var(--global-glow);
+        }
+      }
+
+      &:active {
+        transform: scale(0.96);
+      }
+
       img {
-        width: 3.2rem;
-        height: 3.2rem;
-        margin-bottom: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 0;
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 0;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
         }
       }
 
       i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        color: var(--global-text-color-light);
+        transition: color var(--duration-fast) var(--ease-out);
       }
 
       &:hover {
-        text-decoration: none;
-
         i::before {
-          color: var(--global-theme-color);
+          color: var(--global-hover-text-color);
         }
       }
     }
   }
 
   .contact-note {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    font-family: var(--global-font-mono);
   }
 }
 
@@ -470,11 +650,12 @@ ul.task-list input[type="checkbox"] {
     width: 100%;
   }
 }
-
 // Footer
+
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  border-top: 1px solid var(--global-border-color);
 
   .container {
     color: var(--global-footer-text-color);
@@ -485,16 +666,18 @@ footer.fixed-bottom {
 
   a {
     color: var(--global-footer-link-color);
+    font-weight: 500;
+    transition: color var(--duration-fast) var(--ease-out);
 
     &:hover {
-      color: var(--global-theme-color);
+      color: var(--global-accent-blue);
       text-decoration: none;
     }
   }
 }
 
 footer.sticky-bottom {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 1px solid var(--global-border-color);
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
@@ -876,10 +1059,12 @@ figure.highlight {
 }
 
 pre {
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 6px;
-  padding: 6px 12px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
 
   pre,
   code {
@@ -893,16 +1078,17 @@ pre {
 code {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 3px;
-  padding: 3px 3px;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.88em;
 }
 
-// Transitioning Themes
+// Transitioning Themes — smooth color/background swap
 html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  transition: background-color 300ms var(--ease-out), color 300ms var(--ease-out), border-color 300ms var(--ease-out), box-shadow 300ms var(--ease-out) !important;
   transition-delay: 0 !important;
 }
 
@@ -1341,4 +1527,188 @@ ninja-keys::part(ninja-input-wrapper) {
 ::highlight(search) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
+}
+
+// ---------------------------------------------------------------------------
+// Modern dev theme components
+// ---------------------------------------------------------------------------
+
+// Section headers with accent kickers
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.4em;
+    background: var(--global-accent-gradient);
+    border-radius: 2px;
+  }
+
+  h2,
+  h3 {
+    margin: 0;
+    font-family: var(--global-font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+// Timeline items (news + latest posts cards)
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .timeline-item {
+    position: relative;
+    padding: 1rem 1.25rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--global-card-bg-color);
+    margin-bottom: 0.75rem;
+    transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--global-shadow-md);
+      }
+    }
+  }
+
+  .timeline-date {
+    display: inline-block;
+    font-family: var(--global-font-mono);
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    background: var(--global-surface-hover);
+    margin-bottom: 0.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .timeline-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    a {
+      font-weight: 500;
+    }
+  }
+}
+
+// Back-to-top button
+#back-to-top {
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: opacity var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+// Progress bar glow
+.progress-container .progress-bar {
+  box-shadow: 0 0 10px var(--global-accent);
+}
+
+// Blog header bar
+.header-bar {
+  border-bottom: 1px solid var(--global-border-color);
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 3.5rem;
+    font-family: var(--global-font-display);
+  }
+}
+
+// Post list items
+.post-list li {
+  border-bottom: 1px solid var(--global-border-color);
+  padding: 1.5rem 0;
+}
+
+// Search modal accent
+ninja-keys {
+  --ninja-accent-color: var(--global-theme-color);
+}
+
+// ============================================================================
+// Micro-interactions
+// ============================================================================
+
+// Staggered entrance for cards and list items
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects .col,
+.post-list li,
+.timeline .timeline-item {
+  animation: fadeInUp var(--duration-slow) var(--ease-out) both;
+}
+
+@for $i from 1 through 12 {
+  .projects .col:nth-child(#{$i}),
+  .post-list li:nth-child(#{$i}),
+  .timeline .timeline-item:nth-child(#{$i}) {
+    animation-delay: #{$i * 60}ms;
+  }
+}
+
+// Scale on press for interactive elements
+.card:active,
+.timeline .timeline-item:active {
+  transform: scale(0.98);
+}
+
+// Icon transitions for navbar social
+.navbar-brand.social a i::before {
+  transition: color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+}
+
+// Theme toggle animation
+#light-toggle i {
+  transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

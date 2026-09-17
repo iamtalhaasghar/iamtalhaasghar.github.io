@@ -148,3 +148,20 @@
     </progress>
   {% endif %}
 </header>
+
+<script>
+(function() {
+  var nav = document.getElementById('navbar');
+  if (!nav) return;
+  var last = 0;
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    if (y > 20) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    last = y;
+  });
+})();
+</script>
